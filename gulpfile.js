@@ -27,8 +27,10 @@ const npmDist = require('gulp-npm-dist');
 var sass = require('gulp-sass')(require('sass'));
 var wait = require('gulp-wait');
 var sourcemaps = require('gulp-sourcemaps');
-var fileinclude = require('gulp-file-include');
+const { options: optionsObject } = require("./options");
 
+var handlebars = require('gulp-compile-handlebars');
+var rename = require('gulp-rename');
 // Define paths
 
 const paths = {
@@ -71,6 +73,16 @@ const paths = {
     }
 };
 
+var templateData = {
+    TableName: "tableName",
+    firstName: 'KeshavSoft',
+    Array: [{ name: "create" }, { name: "show" }, { name: "KeshavSoft" }],
+    SideBarItems: [],
+    SideBarForCalender: [],
+    TableColumns: [],
+    columns: []
+};
+
 // Compile SCSS
 gulp.task('scss', function () {
     return gulp.src([paths.src.scss + '/custom/**/*.scss', paths.src.scss + '/volt/**/*.scss', paths.src.scss + '/volt.scss'])
@@ -87,12 +99,14 @@ gulp.task('scss', function () {
 
 gulp.task('index', function () {
     return gulp.src([paths.src.base + '*.html'])
-        .pipe(fileinclude({
-            prefix: '@@',
-            basepath: './src/partials/',
-            context: {
-                environment: 'development'
-            }
+        .pipe(handlebars(templateData, optionsObject))
+        .pipe(rename((path) => {
+            console.log("Renaming path: ", path);
+            return {
+                dirname: path.dirname,
+                basename: path.basename,
+                extname: ".html"
+            };
         }))
         .pipe(gulp.dest(paths.temp.base))
         .pipe(browserSync.stream());
@@ -100,12 +114,14 @@ gulp.task('index', function () {
 
 gulp.task('html', function () {
     return gulp.src([paths.src.html])
-        .pipe(fileinclude({
-            prefix: '@@',
-            basepath: './src/partials/',
-            context: {
-                environment: 'development'
-            }
+        .pipe(handlebars(templateData, optionsObject))
+        .pipe(rename((path) => {
+            console.log("Renaming path: ", path);
+            return {
+                dirname: path.dirname,
+                basename: path.basename,
+                extname: ".html"
+            };
         }))
         .pipe(gulp.dest(paths.temp.html))
         .pipe(browserSync.stream());
@@ -117,12 +133,12 @@ gulp.task('assets', function () {
         .pipe(browserSync.stream());
 });
 
-gulp.task('vendor', function() {
+gulp.task('vendor', function () {
     return gulp.src(npmDist(), { base: paths.src.node_modules })
-      .pipe(gulp.dest(paths.temp.vendor));
+        .pipe(gulp.dest(paths.temp.vendor));
 });
 
-gulp.task('serve', gulp.series('scss', 'html', 'index', 'assets', 'vendor', function() {
+gulp.task('serve', gulp.series('scss', 'html', 'index', 'assets', 'vendor', function () {
     browserSync.init({
         server: paths.temp.base
     });
@@ -147,8 +163,8 @@ gulp.task('minify:css', function () {
     return gulp.src([
         paths.dist.css + '/volt.css'
     ])
-    .pipe(cleanCss())
-    .pipe(gulp.dest(paths.dist.css))
+        .pipe(cleanCss())
+        .pipe(gulp.dest(paths.dist.css))
 });
 
 // Minify Html
@@ -157,12 +173,14 @@ gulp.task('minify:html', function () {
         .pipe(htmlmin({
             collapseWhitespace: true
         }))
-        .pipe(fileinclude({
-            prefix: '@@',
-            basepath: './src/partials/',
-            context: {
-                environment: 'production'
-            }
+        .pipe(handlebars(templateData, optionsObject))
+        .pipe(rename((path) => {
+            console.log("Renaming path: ", path);
+            return {
+                dirname: path.dirname,
+                basename: path.basename,
+                extname: ".html"
+            };
         }))
         .pipe(gulp.dest(paths.dist.html))
 });
@@ -172,12 +190,14 @@ gulp.task('minify:html:index', function () {
         .pipe(htmlmin({
             collapseWhitespace: true
         }))
-        .pipe(fileinclude({
-            prefix: '@@',
-            basepath: './src/partials/',
-            context: {
-                environment: 'production'
-            }
+        .pipe(handlebars(templateData, optionsObject))
+        .pipe(rename((path) => {
+            console.log("Renaming path: ", path);
+            return {
+                dirname: path.dirname,
+                basename: path.basename,
+                extname: ".html"
+            };
         }))
         .pipe(gulp.dest(paths.dist.base))
 });
@@ -219,24 +239,28 @@ gulp.task('copy:dev:css', function () {
 // Copy Html
 gulp.task('copy:dist:html', function () {
     return gulp.src([paths.src.html])
-        .pipe(fileinclude({
-            prefix: '@@',
-            basepath: './src/partials/',
-            context: {
-                environment: 'production'
-            }
+        .pipe(handlebars(templateData, optionsObject))
+        .pipe(rename((path) => {
+            console.log("Renaming path: ", path);
+            return {
+                dirname: path.dirname,
+                basename: path.basename,
+                extname: ".html"
+            };
         }))
         .pipe(gulp.dest(paths.dist.html));
 });
 
 gulp.task('copy:dev:html', function () {
     return gulp.src([paths.src.html])
-        .pipe(fileinclude({
-            prefix: '@@',
-            basepath: './src/partials/',
-            context: {
-                environment: 'development'
-            }
+        .pipe(handlebars(templateData, optionsObject))
+        .pipe(rename((path) => {
+            console.log("Renaming path: ", path);
+            return {
+                dirname: path.dirname,
+                basename: path.basename,
+                extname: ".html"
+            };
         }))
         .pipe(gulp.dest(paths.dev.html));
 });
@@ -244,24 +268,28 @@ gulp.task('copy:dev:html', function () {
 // Copy index
 gulp.task('copy:dist:html:index', function () {
     return gulp.src([paths.src.base + '*.html'])
-        .pipe(fileinclude({
-            prefix: '@@',
-            basepath: './src/partials/',
-            context: {
-                environment: 'production'
-            }
+        .pipe(handlebars(templateData, optionsObject))
+        .pipe(rename((path) => {
+            console.log("Renaming path: ", path);
+            return {
+                dirname: path.dirname,
+                basename: path.basename,
+                extname: ".html"
+            };
         }))
         .pipe(gulp.dest(paths.dist.base))
 });
 
 gulp.task('copy:dev:html:index', function () {
     return gulp.src([paths.src.base + '*.html'])
-        .pipe(fileinclude({
-            prefix: '@@',
-            basepath: './src/partials/',
-            context: {
-                environment: 'development'
-            }
+        .pipe(handlebars(templateData, optionsObject))
+        .pipe(rename((path) => {
+            console.log("Renaming path: ", path);
+            return {
+                dirname: path.dirname,
+                basename: path.basename,
+                extname: ".html"
+            };
         }))
         .pipe(gulp.dest(paths.dev.base))
 });
@@ -278,14 +306,14 @@ gulp.task('copy:dev:assets', function () {
 });
 
 // Copy node_modules to vendor
-gulp.task('copy:dist:vendor', function() {
+gulp.task('copy:dist:vendor', function () {
     return gulp.src(npmDist(), { base: paths.src.node_modules })
-      .pipe(gulp.dest(paths.dist.vendor));
+        .pipe(gulp.dest(paths.dist.vendor));
 });
 
-gulp.task('copy:dev:vendor', function() {
+gulp.task('copy:dev:vendor', function () {
     return gulp.src(npmDist(), { base: paths.src.node_modules })
-      .pipe(gulp.dest(paths.dev.vendor));
+        .pipe(gulp.dest(paths.dev.vendor));
 });
 
 gulp.task('build:dev', gulp.series('clean:dev', 'copy:dev:css', 'copy:dev:html', 'copy:dev:html:index', 'copy:dev:assets', 'beautify:css', 'copy:dev:vendor'));
