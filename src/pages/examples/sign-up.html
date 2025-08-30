@@ -19,18 +19,10 @@
 <html lang="en">
 
 <head> 
-    @@include('./_head.html', {
-        "path": "../..",
-        "title": "Volt Premium Bootstrap Dashboard - Sign up page"
-    })
+    {{> _head title="Sign Up"}}
 </head>
 
 <body>
-
-    <!-- NOTICE: You can use the _analytics.html partial to include production code specific code & trackers -->
-    @@if (environment === 'production') {
-        @@include('./_analytics_body.html')
-    }
 
     <main>
 
@@ -123,10 +115,7 @@
             </div>
         </section>
     </main>
-
-    @@include('./_scripts.html', {
-        "path": "../.."
-    })
+    {{> _scripts title="Sign Up"}}
     
 </body>
 
