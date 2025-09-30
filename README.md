@@ -71,3 +71,7 @@ If you run `gulp` without specifying any tasks, it will execute the default task
 ### 1.4.2
 
 - Volt - Bootstrap 5 Dashboard, changed to handlebars
+
+### 1.4.3
+
+- settings html started
