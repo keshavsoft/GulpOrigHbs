@@ -79,3 +79,7 @@ If you run `gulp` without specifying any tasks, it will execute the default task
 ### 1.4.4
 
 - transactions html started
+
+### 1.4.5
+
+- transactions versions started
