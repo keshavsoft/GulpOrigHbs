@@ -1,0 +1,167 @@
+<!--
+
+=========================================================
+* Volt Free - Bootstrap 5 Dashboard
+=========================================================
+
+* Product Page: https://themesberg.com/product/admin-dashboard/volt-bootstrap-5-dashboard
+* Copyright 2021 Themesberg (https://www.themesberg.com)
+* License (https://themesberg.com/licensing)
+
+* Designed and coded by https://www.themesberg.com
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. Please contact us to request a removal.
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{> _head title="Total Orders"}}
+</head>
+
+<body>
+    {{> dashboard/_nav title="Total Orders"}}
+
+    {{> dashboard/_sidenavV1 title="Total Orders" isComponentsGroup=true}}
+
+    <main class="content">
+        {{> dashboard/_topbar title="Total Orders"}}
+
+        <div class="py-4">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb breadcrumb-dark breadcrumb-transparent">
+                    <li class="breadcrumb-item"><a href="{{path}}/pages/dashboard/dashboardV1.html">Dashboard</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Total Orders</li>
+                </ol>
+            </nav>
+
+            <div class="row">
+                <div class="col-12 col-lg-8 mb-4">
+                    <div class="card shadow-sm border-0">
+                        <div class="card-header border-0 bg-transparent">
+                            <h2 class="mb-0">Total Orders</h2>
+                        </div>
+                        <div class="card-body">
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                    <div class="p-4 bg-gray-50 rounded">
+                                        <div class="d-flex align-items-center mb-3">
+                                            <svg class="icon icon-lg text-gray-400 me-3" fill="currentColor"
+                                                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd"
+                                                    d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 100-4 2 2 0 000 4z"
+                                                    clip-rule="evenodd"></path>
+                            </svg>
+                                            <span class="text-gray-600">Total Orders</span>
+                                        </div>
+                                        <h3 class="text-dark mb-0" style="font-size: 2.5rem; font-weight: bold;">452</h3>
+                                        <small class="text-gray-600">This month</small>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="p-4 bg-gray-50 rounded">
+                                        <div class="d-flex align-items-center mb-3">
+                                            <svg class="icon icon-lg text-success me-3" fill="currentColor"
+                                                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd"
+                                                    d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+                                                    clip-rule="evenodd"></path>
+                            </svg>
+                                            <span class="text-gray-600">Completed Orders</span>
+                                        </div>
+                                        <h3 class="text-dark mb-0" style="font-size: 2.5rem; font-weight: bold;">398</h3>
+                                        <small class="text-success ms-0">↑ 18.2% from last month</small>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="p-4 bg-gray-50 rounded">
+                                        <div class="d-flex align-items-center mb-3">
+                                            <svg class="icon icon-lg text-warning me-3" fill="currentColor"
+                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z">
+                                                </path>
+                            </svg>
+                                            <span class="text-gray-600">Pending Orders</span>
+                                        </div>
+                                        <h3 class="text-dark mb-0" style="font-size: 2.5rem; font-weight: bold;">38</h3>
+                                        <small class="text-warning ms-0">Awaiting shipment</small>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="p-4 bg-gray-50 rounded">
+                                        <div class="d-flex align-items-center mb-3">
+                                            <svg class="icon icon-lg text-danger me-3" fill="currentColor"
+                                                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd"
+                                                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                                    clip-rule="evenodd"></path>
+                            </svg>
+                                            <span class="text-gray-600">Cancelled Orders</span>
+                                        </div>
+                                        <h3 class="text-dark mb-0" style="font-size: 2.5rem; font-weight: bold;">16</h3>
+                                        <small class="text-danger ms-0">In the last 30 days</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-4 mb-4">
+                    <div class="card shadow-sm border-0">
+                        <div class="card-header border-0 bg-transparent">
+                            <h3 class="mb-0">Order Status Distribution</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span class="font-weight-bold">Completed</span>
+                                    <span class="badge badge-success">88%</span>
+                                </div>
+                                <div class="progress" style="height: 10px;">
+                                    <div class="progress-bar bg-success" role="progressbar" style="width: 88%"
+                                        aria-valuenow="88" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span class="font-weight-bold">Pending</span>
+                                    <span class="badge badge-warning">8%</span>
+                                </div>
+                                <div class="progress" style="height: 10px;">
+                                    <div class="progress-bar bg-warning" role="progressbar" style="width: 8%"
+                                        aria-valuenow="8" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span class="font-weight-bold">Cancelled</span>
+                                    <span class="badge badge-danger">4%</span>
+                                </div>
+                                <div class="progress" style="height: 10px;">
+                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 4%"
+                                        aria-valuenow="4" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {{> _footer}}
+    </main>
+
+    {{> _scripts}}
+</body>
+
+</html>
