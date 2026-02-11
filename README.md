@@ -83,3 +83,7 @@ If you run `gulp` without specifying any tasks, it will execute the default task
 ### 1.4.5
 
 - transactions versions started
+
+### 1.4.6
+
+- npm run dev added

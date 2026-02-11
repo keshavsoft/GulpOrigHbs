@@ -1,11 +1,12 @@
 {
     "name": "GulpOrigHbs",
-    "version": "1.4.5",
+    "version": "1.4.6",
     "description": "Volt - Bootstrap 5 Dashboard, changed to handlebars",
     "main": "gulpfile.js",
     "author": "Themesberg",
     "scripts": {
-        "dist": "gulp build:dist"
+        "dist": "gulp build:dist",
+        "dev": "gulp"
     },
     "keywords": [
         "bootstrap",
