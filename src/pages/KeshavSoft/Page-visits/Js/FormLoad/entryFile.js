@@ -4,4 +4,6 @@ const StartFunc = async () => {
     StartFuncFromDOMContentLoaded();
 };
 
+StartFunc();
+
 export { StartFunc };
