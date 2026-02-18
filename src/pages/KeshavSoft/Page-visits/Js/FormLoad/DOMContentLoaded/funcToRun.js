@@ -1,0 +1,5 @@
+const StartFunc = () => {
+
+};
+
+export { StartFunc };
