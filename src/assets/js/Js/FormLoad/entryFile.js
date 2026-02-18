@@ -3,5 +3,5 @@ import { StartFunc as StartFuncFromDOMContentLoaded } from "./DOMContentLoaded/e
 const StartFunc = async () => {
     StartFuncFromDOMContentLoaded();
 };
-
+StartFunc();   
 export { StartFunc };
