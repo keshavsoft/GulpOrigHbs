@@ -58,6 +58,7 @@ const paths = {
         base: './src/',
         css: './src/css',
         html: './src/pages/**/*.html',
+        js_pages: './src/pages/**/*.js',
         assets: './src/assets/**/*.*',
         partials: './src/partials/**/*.html',
         scss: './src/scss',
@@ -138,13 +139,20 @@ gulp.task('vendor', function () {
         .pipe(gulp.dest(paths.temp.vendor));
 });
 
-gulp.task('serve', gulp.series('scss', 'html', 'index', 'assets', 'vendor', function () {
+gulp.task('js:pages', function () {
+    return gulp.src([paths.src.js_pages])
+        .pipe(gulp.dest(paths.temp.html))
+        .pipe(browserSync.stream());
+});
+
+gulp.task('serve', gulp.series('scss', 'html', 'index', 'assets', 'vendor', 'js:pages', function () {
     browserSync.init({
         server: paths.temp.base
     });
 
     gulp.watch([paths.src.scss + '/volt/**/*.scss', paths.src.scss + '/custom/**/*.scss', paths.src.scss + '/volt.scss'], gulp.series('scss'));
     gulp.watch([paths.src.html, paths.src.base + '*.html', paths.src.partials], gulp.series('html', 'index'));
+    gulp.watch([paths.src.js_pages], gulp.series('js:pages'));
     gulp.watch([paths.src.assets], gulp.series('assets'));
     gulp.watch([paths.src.vendor], gulp.series('vendor'));
 }));
