@@ -141,7 +141,7 @@ gulp.task('vendor', function () {
 
 gulp.task('js:pages', function () {
     return gulp.src([paths.src.js_pages])
-        .pipe(gulp.dest(paths.temp.html))
+        .pipe(gulp.dest(paths.temp.base + '/pages'))
         .pipe(browserSync.stream());
 });
 

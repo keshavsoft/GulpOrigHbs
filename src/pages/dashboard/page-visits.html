@@ -1,0 +1,198 @@
+<!--
+
+=========================================================
+* Volt Free - Bootstrap 5 Dashboard
+=========================================================
+
+* Product Page: https://themesberg.com/product/admin-dashboard/volt-bootstrap-5-dashboard
+* Copyright 2021 Themesberg (https://www.themesberg.com)
+* License (https://themesberg.com/licensing)
+
+* Designed and coded by https://www.themesberg.com
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. Please contact us to request a removal.
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{> _head title="Page Visits"}}
+</head>
+
+<body>
+    {{> dashboard/_nav title="Page Visits"}}
+
+    {{> dashboard/_sidenavV1 title="Page Visits" isComponentsGroup=true}}
+
+    <main class="content">
+        {{> dashboard/_topbar title="Page Visits"}}
+
+        <div class="py-4">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb breadcrumb-dark breadcrumb-transparent">
+                    <li class="breadcrumb-item"><a href="{{path}}/pages/dashboard/dashboardV1.html">Dashboard</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Page Visits</li>
+                </ol>
+            </nav>
+
+            <div class="row mb-4">
+                <div class="col-12">
+                    <div class="card shadow-sm border-0">
+                        <div class="card-header border-0 bg-transparent">
+                            <div class="row align-items-center">
+                                <div class="col">
+                                    <h2 class="mb-0">Page Visits</h2>
+                                    <p class="text-gray-600 mb-0">Feb 1 - Apr 1</p>
+                                </div>
+                                <div class="col text-end">
+                                    <span class="badge badge-success">
+                                        <svg class="icon icon-xs me-1" fill="currentColor" viewBox="0 0 20 20"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd"
+                                                d="M12 7a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0V8.207l-5.293 5.293a1 1 0 01-1.414-1.414L12.586 8H8a1 1 0 010-2h4z"
+                                                clip-rule="evenodd"></path>
+                                        </svg>
+                                        22%
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-hover table-centered mb-0">
+                                <thead class="bg-gray-50">
+                                    <tr>
+                                        <th class="ps-4">Page Name</th>
+                                        <th>Page Views</th>
+                                        <th>Page Value</th>
+                                        <th>Bounce Rate</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="ps-4">
+                                            <a href="#" class="text-primary fw-bold">
+                                                /demo/admin/index.html
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <span class="fw-bold">3,225</span>
+                                        </td>
+                                        <td>
+                                            <span class="fw-bold text-success">$20</span>
+                                        </td>
+                                        <td>
+                                            <svg class="icon icon-xs me-2 text-danger" fill="currentColor"
+                                                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd"
+                                                    d="M12 7a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0V8.207l-5.293 5.293a1 1 0 01-1.414-1.414L12.586 8H8a1 1 0 010-2h4z"
+                                                    clip-rule="evenodd"></path>
+                                            </svg>
+                                            <span class="fw-bold">42,55%</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ps-4">
+                                            <a href="#" class="text-primary fw-bold">
+                                                /demo/admin/forms.html
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <span class="fw-bold">2,987</span>
+                                        </td>
+                                        <td>
+                                            <span class="fw-bold">0</span>
+                                        </td>
+                                        <td>
+                                            <svg class="icon icon-xs me-2 text-success" fill="currentColor"
+                                                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd"
+                                                    d="M12 13a1 1 0 100-2h-5a1 1 0 100 2h5zm0-4a1 1 0 100-2H7a1 1 0 100 2h5z"
+                                                    clip-rule="evenodd"></path>
+                                            </svg>
+                                            <span class="fw-bold">43,24%</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ps-4">
+                                            <a href="#" class="text-primary fw-bold">
+                                                /demo/admin/util.html
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <span class="fw-bold">2,844</span>
+                                        </td>
+                                        <td>
+                                            <span class="fw-bold text-success">$294</span>
+                                        </td>
+                                        <td>
+                                            <svg class="icon icon-xs me-2 text-success" fill="currentColor"
+                                                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd"
+                                                    d="M12 13a1 1 0 100-2h-5a1 1 0 100 2h5zm0-4a1 1 0 100-2H7a1 1 0 100 2h5z"
+                                                    clip-rule="evenodd"></path>
+                                            </svg>
+                                            <span class="fw-bold">32,35%</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ps-4">
+                                            <a href="#" class="text-primary fw-bold">
+                                                /demo/admin/validation.html
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <span class="fw-bold">2,050</span>
+                                        </td>
+                                        <td>
+                                            <span class="fw-bold text-success">$147</span>
+                                        </td>
+                                        <td>
+                                            <svg class="icon icon-xs me-2 text-danger" fill="currentColor"
+                                                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd"
+                                                    d="M12 7a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0V8.207l-5.293 5.293a1 1 0 01-1.414-1.414L12.586 8H8a1 1 0 010-2h4z"
+                                                    clip-rule="evenodd"></path>
+                                            </svg>
+                                            <span class="fw-bold">50,87%</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ps-4">
+                                            <a href="#" class="text-primary fw-bold">
+                                                /demo/admin/modals.html
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <span class="fw-bold">1,483</span>
+                                        </td>
+                                        <td>
+                                            <span class="fw-bold text-success">$19</span>
+                                        </td>
+                                        <td>
+                                            <svg class="icon icon-xs me-2 text-success" fill="currentColor"
+                                                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd"
+                                                    d="M12 13a1 1 0 100-2h-5a1 1 0 100 2h5zm0-4a1 1 0 100-2H7a1 1 0 100 2h5z"
+                                                    clip-rule="evenodd"></path>
+                                            </svg>
+                                            <span class="fw-bold">26,12%</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {{> _footer}}
+    </main>
+
+    {{> _scripts}}
+</body>
+
+</html>

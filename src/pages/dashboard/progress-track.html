@@ -1,0 +1,218 @@
+<!--
+
+=========================================================
+* Volt Free - Bootstrap 5 Dashboard
+=========================================================
+
+* Product Page: https://themesberg.com/product/admin-dashboard/volt-bootstrap-5-dashboard
+* Copyright 2021 Themesberg (https://www.themesberg.com)
+* License (https://themesberg.com/licensing)
+
+* Designed and coded by https://www.themesberg.com
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. Please contact us to request a removal.
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{> _head title="Progress Track"}}
+</head>
+
+<body>
+    {{> dashboard/_nav title="Progress Track"}}
+
+    {{> dashboard/_sidenavV1 title="Progress Track" isComponentsGroup=true}}
+
+    <main class="content">
+        {{> dashboard/_topbar title="Progress Track"}}
+
+        <div class="py-4">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb breadcrumb-dark breadcrumb-transparent">
+                    <li class="breadcrumb-item"><a href="{{path}}/pages/dashboard/dashboardV1.html">Dashboard</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Progress Track</li>
+                </ol>
+            </nav>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="card shadow-sm border-0 mb-4">
+                        <div class="card-header border-0 bg-transparent">
+                            <h2 class="mb-0">Progress Track</h2>
+                        </div>
+                        <div class="card-body">
+                            <div class="mb-4">
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <div>
+                                        <h5 class="mb-1 font-weight-bold">Rocket - SaaS Template</h5>
+                                        <p class="text-gray-600 mb-0">Design & Development</p>
+                                    </div>
+                                    <span class="badge badge-lg bg-success">75%</span>
+                                </div>
+                                <div class="progress" style="height: 12px;">
+                                    <div class="progress-bar bg-success" role="progressbar" style="width: 75%"
+                                        aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+
+                            <div class="mb-4">
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <div>
+                                        <h5 class="mb-1 font-weight-bold">Themesberg - Design System</h5>
+                                        <p class="text-gray-600 mb-0">UI Kit & Components</p>
+                                    </div>
+                                    <span class="badge badge-lg bg-info">60%</span>
+                                </div>
+                                <div class="progress" style="height: 12px;">
+                                    <div class="progress-bar bg-info" role="progressbar" style="width: 60%"
+                                        aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+
+                            <div class="mb-4">
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <div>
+                                        <h5 class="mb-1 font-weight-bold">Homepage Design in Figma</h5>
+                                        <p class="text-gray-600 mb-0">Design Phase</p>
+                                    </div>
+                                    <span class="badge badge-lg bg-warning">45%</span>
+                                </div>
+                                <div class="progress" style="height: 12px;">
+                                    <div class="progress-bar bg-warning" role="progressbar" style="width: 45%"
+                                        aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+
+                            <div class="mb-4">
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <div>
+                                        <h5 class="mb-1 font-weight-bold">Backend for Themesberg v2</h5>
+                                        <p class="text-gray-600 mb-0">API Development</p>
+                                    </div>
+                                    <span class="badge badge-lg bg-danger">34%</span>
+                                </div>
+                                <div class="progress" style="height: 12px;">
+                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 34%"
+                                        aria-valuenow="34" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+
+                            <div class="mb-4">
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <div>
+                                        <h5 class="mb-1 font-weight-bold">Mobile App Development</h5>
+                                        <p class="text-gray-600 mb-0">iOS & Android</p>
+                                    </div>
+                                    <span class="badge badge-lg bg-secondary">25%</span>
+                                </div>
+                                <div class="progress" style="height: 12px;">
+                                    <div class="progress-bar bg-secondary" role="progressbar" style="width: 25%"
+                                        aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <div>
+                                        <h5 class="mb-1 font-weight-bold">QA & Testing</h5>
+                                        <p class="text-gray-600 mb-0">Quality Assurance</p>
+                                    </div>
+                                    <span class="badge badge-lg bg-info">50%</span>
+                                </div>
+                                <div class="progress" style="height: 12px;">
+                                    <div class="progress-bar bg-info" role="progressbar" style="width: 50%"
+                                        aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12 col-lg-8">
+                    <div class="card shadow-sm border-0">
+                        <div class="card-header border-0 bg-transparent">
+                            <h2 class="mb-0">Project Timeline</h2>
+                        </div>
+                        <div class="card-body">
+                            <div class="timeline timeline-one-side">
+                                <div class="timeline-content">
+                                    <div class="timeline-event">
+                                        <span class="timeline-event-icon">
+                                            <svg class="icon icon-sm text-danger" fill="currentColor"
+                                                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd"
+                                                    d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                                                    clip-rule="evenodd"></path>
+                                            </svg>
+                                        </span>
+                                        <div class="timeline-event-content">
+                                            <h5 class="font-weight-bold mb-1">Project Kickoff</h5>
+                                            <p class="text-gray-600 text-sm mb-0">Jan 15, 2026</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="timeline-event">
+                                        <span class="timeline-event-icon">
+                                            <svg class="icon icon-sm text-info" fill="currentColor"
+                                                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd"
+                                                    d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 100-4 2 2 0 000 4z"
+                                                    clip-rule="evenodd"></path>
+                                            </svg>
+                                        </span>
+                                        <div class="timeline-event-content">
+                                            <h5 class="font-weight-bold mb-1">Design Phase Started</h5>
+                                            <p class="text-gray-600 text-sm mb-0">Jan 22, 2026</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="timeline-event">
+                                        <span class="timeline-event-icon">
+                                            <svg class="icon icon-sm text-success" fill="currentColor"
+                                                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd"
+                                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                                    clip-rule="evenodd"></path>
+                                            </svg>
+                                        </span>
+                                        <div class="timeline-event-content">
+                                            <h5 class="font-weight-bold mb-1">Design Phase Completed</h5>
+                                            <p class="text-gray-600 text-sm mb-0">Feb 5, 2026</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="timeline-event">
+                                        <span class="timeline-event-icon">
+                                            <svg class="icon icon-sm text-warning" fill="currentColor"
+                                                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd"
+                                                    d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v2h8v-2zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-2a4 4 0 00-8 0v2h8z"
+                                                    clip-rule="evenodd"></path>
+                                            </svg>
+                                        </span>
+                                        <div class="timeline-event-content">
+                                            <h5 class="font-weight-bold mb-1">Development In Progress</h5>
+                                            <p class="text-gray-600 text-sm mb-0">Currently running</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {{> _footer}}
+    </main>
+
+    {{> _scripts}}
+</body>
+
+</html>

@@ -1,0 +1,196 @@
+<!--
+
+=========================================================
+* Volt Free - Bootstrap 5 Dashboard
+=========================================================
+
+* Product Page: https://themesberg.com/product/admin-dashboard/volt-bootstrap-5-dashboard
+* Copyright 2021 Themesberg (https://www.themesberg.com)
+* License (https://themesberg.com/licensing)
+
+* Designed and coded by https://www.themesberg.com
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. Please contact us to request a removal.
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{> _head title="Team Members"}}
+</head>
+
+<body>
+    {{> dashboard/_nav title="Team Members"}}
+
+    {{> dashboard/_sidenavV1 title="Team Members" isComponentsGroup=true}}
+
+    <main class="content">
+        {{> dashboard/_topbar title="Team Members"}}
+
+        <div class="py-4">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb breadcrumb-dark breadcrumb-transparent">
+                    <li class="breadcrumb-item"><a href="{{path}}/pages/dashboard/dashboardV1.html">Dashboard</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Team Members</li>
+                </ol>
+            </nav>
+
+            <div class="row mb-4">
+                <div class="col-12">
+                    <div class="card shadow-sm border-0">
+                        <div class="card-header border-0 bg-transparent">
+                            <div class="row align-items-center">
+                                <div class="col">
+                                    <h2 class="mb-0">Team Members</h2>
+                                </div>
+                                <div class="col text-end">
+                                    <a href="#" class="btn btn-sm btn-primary">Invite New Member</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-hover table-centered mb-0">
+                                <thead class="bg-gray-50">
+                                    <tr>
+                                        <th class="ps-4">Name</th>
+                                        <th>Status</th>
+                                        <th>Role</th>
+                                        <th>Email</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="ps-4">
+                                            <div class="d-flex align-items-center">
+                                                <img src="{{path}}/assets/img/team/profile-picture-3.jpg"
+                                                    alt="Chris Wood" class="avatar me-3">
+                                                <div>
+                                                    <h3 class="mb-0 font-weight-bold">Chris Wood</h3>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-pill badge-success">
+                                                <span class="me-2">●</span>
+                                                Online
+                                            </span>
+                                        </td>
+                                        <td><span class="font-weight-bold">Admin</span></td>
+                                        <td><a href="mailto:chris@example.com">chris@example.com</a></td>
+                                        <td>
+                                            <button class="btn btn-link btn-sm">
+                                                <svg class="icon icon-sm" fill="currentColor" viewBox="0 0 20 20"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z">
+                                                    </path>
+                                                </svg>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ps-4">
+                                            <div class="d-flex align-items-center">
+                                                <img src="{{path}}/assets/img/team/profile-picture-4.jpg"
+                                                    alt="Jose Leos" class="avatar me-3">
+                                                <div>
+                                                    <h3 class="mb-0 font-weight-bold">Jose Leos</h3>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-pill badge-warning">
+                                                <span class="me-2">●</span>
+                                                In a meeting
+                                            </span>
+                                        </td>
+                                        <td><span class="font-weight-bold">Manager</span></td>
+                                        <td><a href="mailto:jose@example.com">jose@example.com</a></td>
+                                        <td>
+                                            <button class="btn btn-link btn-sm">
+                                                <svg class="icon icon-sm" fill="currentColor" viewBox="0 0 20 20"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z">
+                                                    </path>
+                                                </svg>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ps-4">
+                                            <div class="d-flex align-items-center">
+                                                <img src="{{path}}/assets/img/team/profile-picture-5.jpg"
+                                                    alt="Bonnie Green" class="avatar me-3">
+                                                <div>
+                                                    <h3 class="mb-0 font-weight-bold">Bonnie Green</h3>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-pill badge-danger">
+                                                <span class="me-2">●</span>
+                                                Offline
+                                            </span>
+                                        </td>
+                                        <td><span class="font-weight-bold">Developer</span></td>
+                                        <td><a href="mailto:bonnie@example.com">bonnie@example.com</a></td>
+                                        <td>
+                                            <button class="btn btn-link btn-sm">
+                                                <svg class="icon icon-sm" fill="currentColor" viewBox="0 0 20 20"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z">
+                                                    </path>
+                                                </svg>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ps-4">
+                                            <div class="d-flex align-items-center">
+                                                <img src="{{path}}/assets/img/team/profile-picture-6.jpg"
+                                                    alt="Neil Sims" class="avatar me-3">
+                                                <div>
+                                                    <h3 class="mb-0 font-weight-bold">Neil Sims</h3>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-pill badge-danger">
+                                                <span class="me-2">●</span>
+                                                Offline
+                                            </span>
+                                        </td>
+                                        <td><span class="font-weight-bold">Designer</span></td>
+                                        <td><a href="mailto:neil@example.com">neil@example.com</a></td>
+                                        <td>
+                                            <button class="btn btn-link btn-sm">
+                                                <svg class="icon icon-sm" fill="currentColor" viewBox="0 0 20 20"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z">
+                                                    </path>
+                                                </svg>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {{> _footer}}
+    </main>
+
+    {{> _scripts}}
+</body>
+
+</html>
