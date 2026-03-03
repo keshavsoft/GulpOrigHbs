@@ -25,18 +25,24 @@ const StartFunc = () => {
 
     ];
 
-
-    function createVisitRow(template, data) {
+    function createVisitRow(template, data, index) {
+        debugger
         const clone = template.content.cloneNode(true);
 
+        clone.querySelector('.row-number').textContent = index + 1;
+        clone.querySelector('.page-name').textContent = data.pageName;
+        clone.querySelector('.page-views').textContent = data.views;
+        clone.querySelector('.page-value').textContent = data.value;
+
+        return clone;
+    };
+
+    function createVisitRow1(template, data) {
+        const clone = template.content.cloneNode(true);
 
         clone.querySelector('.page-name').textContent = data.pageName;
         clone.querySelector('.page-views').textContent = data.views;
         clone.querySelector('.page-value').textContent = data.value;
-        clone.querySelector('.bounce-rate').textContent = data.bounceRate;
-
-
-        clone.querySelector('.icon-wrapper').innerHTML = data.icon;
 
         return clone;
     }
@@ -50,12 +56,16 @@ const StartFunc = () => {
 
         container.innerHTML = '';
 
-        data.forEach(item => {
-            const row = createVisitRow(template, item);
+        data.forEach((item, index) => {
+            const row = createVisitRow(template, item, index);
             container.appendChild(row);
         });
-    }
 
+        // data.forEach(item => {
+        //     const row = createVisitRow(template, item);
+        //     container.appendChild(row);
+        // });
+    };
 
     // 4. Run it
     renderVisits(visitsData, 'visits-container', 'visit-template');

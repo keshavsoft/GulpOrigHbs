@@ -1,6 +1,6 @@
 {
     "name": "GulpOrigHbs",
-    "version": "1.4.6",
+    "version": "1.4.7",
     "description": "Volt - Bootstrap 5 Dashboard, changed to handlebars",
     "main": "gulpfile.js",
     "author": "Themesberg",

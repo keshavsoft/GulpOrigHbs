@@ -87,3 +87,7 @@ If you run `gulp` without specifying any tasks, it will execute the default task
 ### 1.4.6
 
 - partials refactor
+
+### 1.4.7
+
+- tally started
