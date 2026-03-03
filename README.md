@@ -91,3 +91,7 @@ If you run `gulp` without specifying any tasks, it will execute the default task
 ### 1.4.7
 
 - tally started
+
+### 1.4.8
+
+- tally index perfect

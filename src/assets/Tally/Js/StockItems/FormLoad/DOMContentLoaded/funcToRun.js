@@ -14,7 +14,7 @@ const StartFunc = async () => {
         clone.querySelector('.page-value').textContent = data.StockItemType;
 
         return clone;
-    }
+    };
 
     function renderVisits(data, containerId, templateId) {
         const container = document.getElementById(containerId);
